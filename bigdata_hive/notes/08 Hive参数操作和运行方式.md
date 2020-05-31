@@ -63,7 +63,7 @@
 
 ​		（1）在命令行中可以直接输入SQL语句，例如：select * from table_name
 
-​		（2）在命令行中可以与HDFS交互，例如：dfs ls /
+​		（2）在命令行中可以与HDFS交互，例如：dfs -ls /
 
 ​		（3）在命令行中可以与linux交互，例如：! pwd或者! ls /
 
