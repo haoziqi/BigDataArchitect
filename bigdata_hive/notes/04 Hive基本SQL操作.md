@@ -310,11 +310,18 @@
 --从表中查询数据插入结果表
 	INSERT OVERWRITE TABLE psn9 SELECT id,name FROM psn
 --从表中获取部分列插入到新表中
+	overwrite关键字：加上后会先覆盖原来数据再清空，不加数据直接会加在文件末尾
+第一种写法（写法简单）
 	from psn
 	insert overwrite table psn9
 	select id,name 
 	insert into table psn10
 	select id
+第二种写法(学习阶段容易理解)
+	insert overwrite table psn9 --要插入到哪张表
+	select id,name  from psn  --要从哪个表查数据
+	insert into table psn10 
+	select id from psn
 ```
 
 ##### 	3、Writing data into the filesystem from queries
